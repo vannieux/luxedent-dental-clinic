@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LUXEDENT - Modern Dentistry. Comfortable Care. Confident Smiles. Experience premium dental care with world-class professionals.">
+    <meta name="theme-color" content="#ffffff">
+    <title>LUXEDENT | Modern Dental Clinic</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563EB',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.05)',
+                        'floating': '0 20px 40px -20px rgba(37,99,235,0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased text-slate-800 bg-slate-50 selection:bg-brand-100 selection:text-brand-900">
+
+    <!-- Navigation -->
+    <header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent py-5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 z-50">
+                <svg class="w-8 h-8 text-brand-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span class="text-2xl font-bold tracking-tighter text-slate-900">LUXEDENT</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
+                <a href="#home" class="hover:text-brand-600 transition-colors">Home</a>
+                <a href="#about" class="hover:text-brand-600 transition-colors">About</a>
+                <a href="#services" class="hover:text-brand-600 transition-colors">Services</a>
+                <a href="#doctors" class="hover:text-brand-600 transition-colors">Doctors</a>
+                <a href="#reviews" class="hover:text-brand-600 transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-brand-600 transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden lg:block">
+                <a href="#contact" class="bg-brand-600 text-white px-6 py-3 rounded-full font-medium hover:bg-brand-700 hover:shadow-floating transition-all duration-300">Book Appointment</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="lg:hidden z-50 p-2 text-slate-600" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-md z-40 hidden flex-col items-center justify-center space-y-8 text-xl font-medium opacity-0 transition-opacity duration-300">
+            <a href="#home" class="mobile-link text-slate-800">Home</a>
+            <a href="#about" class="mobile-link text-slate-800">About</a>
+            <a href="#services" class="mobile-link text-slate-800">Services</a>
+            <a href="#doctors" class="mobile-link text-slate-800">Doctors</a>
+            <a href="#reviews" class="mobile-link text-slate-800">Reviews</a>
+            <a href="#contact" class="mobile-link bg-brand-600 text-white px-8 py-3 rounded-full mt-4">Book Appointment</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
+        <!-- Background Ornaments -->
+        <div class="absolute top-0 right-0 -mr-48 -mt-48 w-[40rem] h-[40rem] rounded-full bg-brand-50 blur-3xl opacity-60 animate-float"></div>
+        <div class="absolute bottom-0 left-0 -ml-48 -mb-48 w-[30rem] h-[30rem] rounded-full bg-blue-50 blur-3xl opacity-60 animate-float" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm mb-4 block">Modern Dentistry. Comfortable Care.</span>
+                    <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] tracking-tighter mb-6">
+                        Your Healthiest Smile <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Starts Here.</span>
+                    </h1>
+                    <p class="text-lg text-slate-500 mb-10 max-w-lg leading-relaxed">
+                        Professional dental care using modern technology with gentle treatment for every patient. Experience dentistry reimagined.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-brand-600 text-white px-8 py-4 rounded-full font-medium text-center hover:bg-brand-700 hover:shadow-floating transition-all duration-300">Book Appointment</a>
+                        <a href="#services" class="bg-slate-100 text-slate-800 px-8 py-4 rounded-full font-medium text-center hover:bg-slate-200 transition-all duration-300">View Services</a>
+                    </div>
+                </div>
+                
+                <div class="relative reveal delay-200">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Smiling patient in luxury dental office" class="rounded-4xl shadow-2xl object-cover w-full h-[500px] lg:h-[650px] transform hover:scale-[1.02] transition-transform duration-700" loading="lazy">
+                    
+                    <!-- Floating Glass Badge -->
+                    <div class="absolute bottom-8 -left-8 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-soft border border-white/50 hidden md:block">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-brand-100 p-3 rounded-full text-brand-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500 font-medium">Patient Satisfaction</p>
+                                <p class="text-xl font-bold text-slate-900">99.8%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white pb-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 border-t border-slate-100 pt-16">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center reveal">
+                    <p class="text-4xl font-extrabold text-brand-600 mb-2"><span class="counter" data-target="10000">0</span>+</p>
+                    <p class="text-slate-500 font-medium">Happy Patients</p>
+                </div>
+                <div class="text-center reveal delay-100">
+                    <p class="text-4xl font-extrabold text-brand-600 mb-2"><span class="counter" data-target="15">0</span>+</p>
+                    <p class="text-slate-500 font-medium">Years Experience</p>
+                </div>
+                <div class="text-center reveal delay-200">
+                    <p class="text-4xl font-extrabold text-brand-600 mb-2"><span class="counter" data-target="4.9" data-decimal="true">0</span>★</p>
+                    <p class="text-slate-500 font-medium">Rating on Google</p>
+                </div>
+                <div class="text-center reveal delay-300">
+                    <p class="text-4xl font-extrabold text-brand-600 mb-2"><span class="counter" data-target="6">0</span></p>
+                    <p class="text-slate-500 font-medium">Expert Dentists</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm mb-2 block">Our Expertise</span>
+                <h2 class="text-4xl font-bold text-slate-900 tracking-tight mb-4">Comprehensive Dental Services</h2>
+                <p class="text-slate-500">We offer a full range of dental treatments using state-of-the-art equipment in a relaxing, spa-like environment.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-10 rounded-4xl shadow-soft hover:-translate-y-2 transition-transform duration-300 group reveal">
+                    <div class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Teeth Cleaning</h3>
+                    <p class="text-slate-500 mb-6 leading-relaxed">Professional tartar removal, polishing, and fluoride treatment to maintain perfect oral hygiene.</p>
+                    <a href="#contact" class="text-brand-600 font-medium inline-flex items-center gap-1 hover:gap-2 transition-all">Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-10 rounded-4xl shadow-soft hover:-translate-y-2 transition-transform duration-300 group reveal delay-100">
+                    <div class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Dental Implants</h3>
+                    <p class="text-slate-500 mb-6 leading-relaxed">Permanent, natural-looking replacement for missing teeth using premium titanium fixtures.</p>
+                    <a href="#contact" class="text-brand-600 font-medium inline-flex items-center gap-1 hover:gap-2 transition-all">Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-10 rounded-4xl shadow-soft hover:-translate-y-2 transition-transform duration-300 group reveal delay-200">
+                    <div class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Orthodontics</h3>
+                    <p class="text-slate-500 mb-6 leading-relaxed">Clear aligners and modern braces to comfortably straighten your teeth and perfect your bite.</p>
+                    <a href="#contact" class="text-brand-600 font-medium inline-flex items-center gap-1 hover:gap-2 transition-all">Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-10 rounded-4xl shadow-soft hover:-translate-y-2 transition-transform duration-300 group reveal">
+                    <div class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Teeth Whitening</h3>
+                    <p class="text-slate-500 mb-6 leading-relaxed">Advanced laser whitening technology to brighten your smile up to 8 shades in a single visit.</p>
+                    <a href="#contact" class="text-brand-600 font-medium inline-flex items-center gap-1 hover:gap-2 transition-all">Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white p-10 rounded-4xl shadow-soft hover:-translate-y-2 transition-transform duration-300 group reveal delay-100">
+                    <div class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Porcelain Veneers</h3>
+                    <p class="text-slate-500 mb-6 leading-relaxed">Custom-crafted ceramic shells to instantly correct chips, gaps, and severe discoloration.</p>
+                    <a href="#contact" class="text-brand-600 font-medium inline-flex items-center gap-1 hover:gap-2 transition-all">Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white p-10 rounded-4xl shadow-soft hover:-translate-y-2 transition-transform duration-300 group reveal delay-200">
+                    <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center text-red-500 mb-6 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Emergency Dental</h3>
+                    <p class="text-slate-500 mb-6 leading-relaxed">Immediate care for severe pain, knocked-out teeth, and other urgent dental situations.</p>
+                    <a href="#contact" class="text-red-500 font-medium inline-flex items-center gap-1 hover:gap-2 transition-all">Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative reveal">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Clinic interior" class="rounded-4xl shadow-2xl object-cover h-[600px] w-full" loading="lazy">
+                    <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-brand-50 rounded-full blur-3xl -z-10"></div>
+                </div>
+
+                <div class="reveal delay-200">
+                    <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm mb-2 block">Our Story</span>
+                    <h2 class="text-4xl font-bold text-slate-900 tracking-tight mb-6">Redefining the Dental Experience.</h2>
+                    <p class="text-lg text-slate-500 mb-8 leading-relaxed">
+                        Since 2008, LUXEDENT has been at the forefront of modern dentistry. We believe that a trip to the dentist shouldn't evoke anxiety, but rather a sense of wellness and care.
+                    </p>
+                    
+                    <div class="space-y-8 mt-10">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center text-brand-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-1">Advanced Technology</h4>
+                                <p class="text-slate-500">We utilize 3D imaging, laser dentistry, and AI diagnostics to provide precise and painless treatments.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center text-brand-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-1">Comfort-First Approach</h4>
+                                <p class="text-slate-500">Noise-canceling headphones, aromatherapy, and sedation options ensure a completely relaxing visit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section id="reviews" class="py-24 bg-slate-900 overflow-hidden text-white relative">
+        <!-- Abstract shape -->
+        <div class="absolute top-0 right-0 w-[50rem] h-[50rem] bg-brand-600/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+                <div class="max-w-2xl">
+                    <span class="text-brand-400 font-semibold tracking-wider uppercase text-sm mb-2 block">Patient Stories</span>
+                    <h2 class="text-4xl font-bold tracking-tight mb-4">Smiles that Speak for Themselves.</h2>
+                </div>
+                <div class="flex gap-4 mt-6 md:mt-0">
+                    <button id="prev-review" class="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button id="next-review" class="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carousel Track -->
+            <div class="overflow-hidden">
+                <div id="testimonial-track" class="flex transition-transform duration-500 ease-out gap-6">
+                    <!-- Cards -->
+                    <div class="min-w-[100%] md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-700/50">
+                        <div class="flex text-yellow-400 mb-6">
+                            ★★★★★
+                        </div>
+                        <p class="text-slate-300 text-lg mb-8 leading-relaxed">"The most painless dental experience I've ever had. The clinic feels like a luxury hotel, and Dr. Smith's attention to detail is unmatched."</p>
+                        <div class="flex items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Sarah J." class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h5 class="font-bold">Sarah Jenkins</h5>
+                                <p class="text-sm text-slate-500">Veneer Patient</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[100%] md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-700/50">
+                        <div class="flex text-yellow-400 mb-6">
+                            ★★★★★
+                        </div>
+                        <p class="text-slate-300 text-lg mb-8 leading-relaxed">"I had severe dental anxiety before coming here. The staff was incredibly patient and used techniques that kept me calm throughout my root canal."</p>
+                        <div class="flex items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Michael T." class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h5 class="font-bold">Michael Torres</h5>
+                                <p class="text-sm text-slate-500">Root Canal Patient</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[100%] md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-700/50">
+                        <div class="flex text-yellow-400 mb-6">
+                            ★★★★★
+                        </div>
+                        <p class="text-slate-300 text-lg mb-8 leading-relaxed">"Got my Invisalign done here. The 3D scanning tech is amazing—no messy molds! My teeth are perfectly straight now and I couldn't be happier."</p>
+                        <div class="flex items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Emily R." class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h5 class="font-bold">Emily Roberts</h5>
+                                <p class="text-sm text-slate-500">Invisalign Patient</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[100%] md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-700/50">
+                        <div class="flex text-yellow-400 mb-6">
+                            ★★★★★
+                        </div>
+                        <p class="text-slate-300 text-lg mb-8 leading-relaxed">"Exceptional care for my entire family. The pediatric dentist was wonderful with my kids, making their first checkup fun rather than scary."</p>
+                        <div class="flex items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="David M." class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h5 class="font-bold">David Miller</h5>
+                                <p class="text-sm text-slate-500">Family Dentistry</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="min-w-[100%] md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-700/50">
+                        <div class="flex text-yellow-400 mb-6">
+                            ★★★★★
+                        </div>
+                        <p class="text-slate-300 text-lg mb-8 leading-relaxed">"Highly professional environment. The laser teeth whitening gave me instant results before my wedding. Worth every penny for the confidence."</p>
+                        <div class="flex items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Jessica W." class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h5 class="font-bold">Jessica Wong</h5>
+                                <p class="text-sm text-slate-500">Whitening Patient</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm mb-2 block">Our Specialists</span>
+                <h2 class="text-4xl font-bold text-slate-900 tracking-tight mb-4">Meet the Experts.</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Doctor 1 -->
+                <div class="bg-white rounded-4xl overflow-hidden shadow-soft hover:shadow-xl transition-all duration-300 group reveal">
+                    <div class="overflow-hidden h-80">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" alt="Dr. Elena Smith" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                    </div>
+                    <div class="p-8">
+                        <p class="text-brand-600 font-medium text-sm mb-1">Lead Prosthodontist</p>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Dr. Elena Smith</h3>
+                        <p class="text-slate-500 mb-4">DDS from UCLA, specializing in complex restorative dentistry and cosmetic smile makeovers.</p>
+                    </div>
+                </div>
+
+                <!-- Doctor 2 -->
+                <div class="bg-white rounded-4xl overflow-hidden shadow-soft hover:shadow-xl transition-all duration-300 group reveal delay-100">
+                    <div class="overflow-hidden h-80">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80" alt="Dr. James Carter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                    </div>
+                    <div class="p-8">
+                        <p class="text-brand-600 font-medium text-sm mb-1">Orthodontist</p>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Dr. James Carter</h3>
+                        <p class="text-slate-500 mb-4">Board-certified specialist in clear aligners and modern aesthetic bracket systems.</p>
+                    </div>
+                </div>
+
+                <!-- Doctor 3 -->
+                <div class="bg-white rounded-4xl overflow-hidden shadow-soft hover:shadow-xl transition-all duration-300 group reveal delay-200">
+                    <div class="overflow-hidden h-80">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" alt="Dr. Sarah Lee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                    </div>
+                    <div class="p-8">
+                        <p class="text-brand-600 font-medium text-sm mb-1">Oral Surgeon</p>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Dr. Sarah Lee</h3>
+                        <p class="text-slate-500 mb-4">Expert in painless implant placement and advanced bone grafting procedures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ & Contact -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16">
+            
+            <!-- Left: FAQ & Info -->
+            <div class="reveal">
+                <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm mb-2 block">Information</span>
+                <h2 class="text-4xl font-bold text-slate-900 tracking-tight mb-8">Frequently Asked Questions</h2>
+                
+                <div class="space-y-4 mb-12 faq-container">
+                    <!-- FAQ 1 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-slate-900 flex justify-between items-center focus:outline-none faq-btn">
+                            Do you accept new patients?
+                            <svg class="w-5 h-5 text-slate-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="px-6 pb-4 text-slate-500 hidden faq-content">
+                            Yes, we are always welcoming new patients to our practice. You can easily book your first comprehensive exam and cleaning using our form.
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 2 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-slate-900 flex justify-between items-center focus:outline-none faq-btn">
+                            What insurances do you take?
+                            <svg class="w-5 h-5 text-slate-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="px-6 pb-4 text-slate-500 hidden faq-content">
+                            We accept most major PPO dental insurance plans. Our front desk will verify your benefits prior to your appointment to ensure transparent pricing.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-slate-900 flex justify-between items-center focus:outline-none faq-btn">
+                            Do you offer emergency services?
+                            <svg class="w-5 h-5 text-slate-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="px-6 pb-4 text-slate-500 hidden faq-content">
+                            Yes, we reserve slots daily for dental emergencies. If you are experiencing severe pain or trauma, please call our emergency line immediately.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-2">Business Hours</h4>
+                        <ul class="text-slate-500 space-y-2">
+                            <li class="flex justify-between"><span>Mon - Fri</span> <span>8:00 AM - 6:00 PM</span></li>
+                            <li class="flex justify-between"><span>Saturday</span> <span>9:00 AM - 2:00 PM</span></li>
+                            <li class="flex justify-between"><span>Sunday</span> <span class="text-brand-600 font-medium">Closed</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-2">Contact Details</h4>
+                        <ul class="text-slate-500 space-y-2">
+                            <li>📞 (555) 123-4567</li>
+                            <li>✉️ hello@luxedent.com</li>
+                            <li class="text-red-500 font-medium mt-4">🚨 Emergency: (555) 911-DENT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Appointment Form & Map -->
+            <div class="reveal delay-200">
+                <div class="bg-slate-50 p-8 rounded-4xl shadow-soft">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Request an Appointment</h3>
+                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Appointment request sent!');">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">First Name</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Last Name</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Service Needed</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all bg-white">
+                                <option>General Checkup</option>
+                                <option>Teeth Whitening</option>
+                                <option>Dental Implants</option>
+                                <option>Orthodontics</option>
+                                <option>Emergency Care</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-600 text-white font-medium py-4 rounded-xl hover:bg-brand-700 transition-colors mt-4">Submit Request</button>
+                    </form>
+                </div>
+                
+                <!-- Map Placeholder -->
+                <div class="mt-8 rounded-4xl overflow-hidden h-48 bg-slate-200 relative group">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" alt="Map Location" class="w-full h-full object-cover opacity-60 mix-blend-multiply group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="bg-white px-4 py-2 rounded-full font-medium text-slate-900 shadow-lg text-sm flex items-center gap-2">
+                            <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            123 Dental Way, Beverly Hills
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="#" class="flex items-center gap-2 mb-6">
+                        <svg class="w-8 h-8 text-brand-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span class="text-2xl font-bold tracking-tighter text-white">LUXEDENT</span>
+                    </a>
+                    <p class="mb-6">Premium dental care focusing on aesthetic perfection, modern technology, and patient comfort.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-600 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-600 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="hover:text-brand-500 transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-500 transition-colors">About Clinic</a></li>
+                        <li><a href="#doctors" class="hover:text-brand-500 transition-colors">Our Doctors</a></li>
+                        <li><a href="#reviews" class="hover:text-brand-500 transition-colors">Patient Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-brand-500 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">General Dentistry</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Cosmetic Dentistry</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Dental Implants</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Orthodontics</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Teeth Whitening</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Newsletter</h4>
+                    <p class="mb-4 text-sm">Subscribe to get tips on oral health and clinic updates.</p>
+                    <form class="flex" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Your email" required class="bg-slate-800 border-none rounded-l-xl px-4 py-3 w-full focus:outline-none focus:ring-1 focus:ring-brand-500 text-white">
+                        <button type="submit" class="bg-brand-600 text-white px-4 py-3 rounded-r-xl hover:bg-brand-700 transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-sm flex flex-col md:flex-row justify-between items-center text-slate-500">
+                <p>&copy; 2026 LUXEDENT Clinic. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
